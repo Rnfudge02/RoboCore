@@ -9,19 +9,24 @@
 #include "../include/Display.hpp"
 #include "../include/Keyboard.hpp"
 
-//Object instantiation
-Keyboard* keyboard;
+#include "../include/UARTController.hpp"
 
-ZEDCamera* zedCamera1;
-Display* display;
+//Object instantiation
+//Keyboard* keyboard;
+
+//ZEDCamera* zedCamera1;
+//Display* display;
+
+UARTController * uartController;
 
 //Main Function
 int main() {
+    /*
     keyboard = new Keyboard();
 
     zedCamera1 = new ZEDCamera();
 
-    /*
+
     cv::namedWindow("WINDOW");
 
     char key = ' ';
@@ -32,8 +37,6 @@ int main() {
         key = cv::waitKey(10);
     }
 
-    */
-    
     display = new Display(0, "DejaVuSans.ttf");
 
     keyboard->attach(display);
@@ -62,6 +65,18 @@ int main() {
     delete zedCamera1;
 
     delete keyboard;
+    */
+
+   uartController = new UARTController();
+   std::cout << "Exited CONSTRUCTOR\n";
+   while(true) {
+    std::string d = uartController->r();
+    std::cout << d << std::endl;
+   }
+
+   uartController->clearBuffers();
+
+   delete uartController;
 
     //Return with no errors (0)
     return 0;

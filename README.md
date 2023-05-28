@@ -10,12 +10,18 @@ Instructions:
 - Call ./RoboCore to run the application
 
 Requirements:
-- LibSDL2, LibSDL2-image, and LibSDL_TTF <- use 'sudo apt-get install libsdl2-dev libsdl2-image-devv libsdl2-ttf-dev'
+- LibSDL2, LibSDL2-image, and LibSDL_TTF <- use 'sudo apt-get install libsdl2-dev libsdl2-image-dev libsdl2-ttf-dev cmake'
 - nVidia CUDA V12.0 or later <- https://developer.nvidia.com/cuda-downloads
 - ZSTD <- use 'sudo apt-get install zstd'
 - ZED SDK V4.0 <- https://www.stereolabs.com/developers/release/
 
 Changelogs:
+
+V 1.2.0A Changelog
+
+New Features:
+- Partially functioning UART controller, still in debugging stages
+- New build script in home directory which 
 
 V 1.1.0 Changelog
 
